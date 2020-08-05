@@ -20,9 +20,6 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: "src/index.html",
 		}),
-		// new webpack.EnvironmentPlugin({
-		// 	NODE_ENV: "production",
-		// }),
 	],
 	mode: process.env.NODE_ENV === "production" ? "production" : "development",
 	devServer: {
