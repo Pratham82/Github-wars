@@ -16,13 +16,13 @@ module.exports = {
 			{ test: /\.js$/, use: "babel-loader" },
 		],
 	},
+	mode: process.env.NODE_ENV === "production" ? "production" : "development",
 	plugins: [
 		new HtmlWebpackPlugin({
 			template: "src/index.html",
 		}),
 		new CopyPlugin([{ from: "_redirects" }]),
 	],
-	mode: process.env.NODE_ENV === "production" ? "production" : "development",
 	devServer: {
 		historyApiFallback: true,
 	},
